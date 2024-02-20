@@ -1,13 +1,20 @@
 import Banner from "../Banner/Banner";
 import Banner2 from "../Banner/Banner2";
-// import Shop from "../Shop/Shop";
+import Products from "../Products/Products";
+import Shop from "../Shop/Shop";
+import Story from "../Story/Story";
+
+
 
 const Home = () => {
     return (
         <div>
             <Banner />
             <Banner2 />
-            {/* <Shop /> */}
+            <Products />
+            <Story />
+            <Shop />
+
         </div>
     );
 };

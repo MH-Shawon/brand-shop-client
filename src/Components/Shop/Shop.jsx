@@ -1,20 +1,11 @@
-import { useLoaderData } from "react-router-dom";
+import React from 'react';
 
 const Shop = () => {
-  const products = useLoaderData();
-  console.log(products);
-  return (
-    <div>
-      <h5 className="text-center mt-[50px] font-merriweather font-medium text-[64px] tracking-[-1.408px] text-[#060606]">
-        Our Featured Products
-      </h5>
-      <div>
-        {
-            products.map(product=><li>{product.brand}</li>)
-        }
-      </div>
-    </div>
-  );
+    return (
+        <div>
+            <h4>This my shop card</h4>
+        </div>
+    );
 };
 
 export default Shop;

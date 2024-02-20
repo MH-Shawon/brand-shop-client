@@ -1,16 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../Layouts/MainLayout";
 import Home from "../Components/Home/Home";
-import Shop from "../Components/Shop/Shop";
+
 import Login from "../Components/Pages/Login";
 import SignUp from "../Components/Pages/SignUp";
 import Error from "../Components/Pages/ErrorPage/Error";
+import Products from "../Components/Products/Products";
+import Story from "../Components/Story/Story";
+import Shop from "../Components/Shop/Shop";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement:<Error />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -19,15 +22,24 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
-        loader: () => fetch(`/products.json`)
+
       },
       {
-        path:'/login',
-        element:<Login />
+        path: "/products",
+        element: <Products />,
+
       },
       {
-        path:'//signUp',
-        element:<SignUp />
+        path:'/ourstory',
+        element:<Story />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '//signUp',
+        element: <SignUp />
       }
     ],
   },

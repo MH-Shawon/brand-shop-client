@@ -23,7 +23,7 @@ const Banner = () => {
                             It is a long established fact that a reader will be distracted <br /> by
                             the readable content of a page when.
                         </p>
-                        <Link to='/shop'>
+                        <Link to='/products'>
                             <button className="h-[46px] w-[198px] font-poppins  bg-[#51994B]">View Collection</button>
                         </Link>
 
