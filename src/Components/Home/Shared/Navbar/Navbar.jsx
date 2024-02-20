@@ -1,8 +1,16 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../../assets/Images/logo/logo.jpg";
+import { useContext } from "react";
+import { AuthContext } from "../../../../Providers/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const handleSignOut = () => {
+    logOut()
+      .then()
+      .catch()
+  }
   const navlinks = (
-    <div className="flex font-poppins text-lg tracking-[-0.342px]">
+  <div className="flex font-poppins text-lg tracking-[-0.342px]">
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
@@ -47,11 +55,15 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-              <Link to='/' className="flex btn btn-ghost ">
+        <Link to="/" className="flex btn btn-ghost ">
           <img className="rounded-full h-12 w-10" src={logo} alt="" />
           <div>
-            <h3 className="text-left font-merriweather text-4xl font-medium p-0 m-0">Nature</h3>
-                      <p className="text-left uppercase text-[7px]  font-semibold p-0 mt-[-5px] text-[#251D18] ">skin care</p>
+            <h3 className="text-left font-merriweather text-4xl font-medium p-0 m-0">
+              Nature
+            </h3>
+            <p className="text-left uppercase text-[7px]  font-semibold p-0 mt-[-5px] text-[#251D18] ">
+              skin care
+            </p>
           </div>
         </Link>
       </div>
@@ -59,7 +71,28 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navlinks}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <div>
+          {
+            user ? <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
+                </div>
+              </div>
+              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                <li>
+                  <a >
+                    {user.displayName}
+
+                  </a>
+                </li>
+                <li><a onClick={handleSignOut}>Logout</a></li>
+              </ul>
+            </div> : <div className="navbar-end">
+              <Link to='/login' className="btn btn-outline">Login</Link>
+            </div>
+          }
+        </div>
       </div>
     </div>
   );

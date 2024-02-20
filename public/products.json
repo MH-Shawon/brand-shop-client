@@ -1,0 +1,183 @@
+ [
+    {
+      "image": "product_image1.jpg",
+      "name": "Hydrating Night Cream",
+      "brand": "L'Oréal",
+      "types_of_products": ["Skincare", "Night Cream"],
+      "price": "$29.99",
+      "short_description": "Nourish your skin overnight with this deeply hydrating night cream.",
+      "rating": 4.2
+    },
+    {
+      "image": "product_image2.jpg",
+      "name": "Youthful Glow Moisturizer",
+      "brand": "Estée Lauder",
+      "types_of_products": ["Skincare", "Moisturizer"],
+      "price": "$39.99",
+      "short_description": "Rejuvenate your skin and restore its youthful radiance with this moisturizer.",
+      "rating": 4.8
+    },
+    {
+      "image": "product_image3.jpg",
+      "name": "Radiance Boost Serum",
+      "brand": "Chanel",
+      "types_of_products": ["Skincare", "Serum"],
+      "price": "$49.99",
+      "short_description": "Achieve a radiant complexion with this nourishing serum enriched with vitamin C.",
+      "rating": 4.5
+    },
+    {
+      "image": "product_image4.jpg",
+      "name": "Gentle Foaming Cleanser",
+      "brand": "Dior",
+      "types_of_products": ["Skincare", "Cleanser"],
+      "price": "$24.99",
+      "short_description": "Cleanse your skin gently and effectively with this foaming cleanser.",
+      "rating": 4.0
+    },
+    {
+      "image": "product_image5.jpg",
+      "name": "Anti-Aging Day Cream",
+      "brand": "Urban Decay",
+      "types_of_products": ["Skincare", "Day Cream"],
+      "price": "$45.99",
+      "short_description": "Fight signs of aging and protect your skin during the day with this anti-aging cream.",
+      "rating": 4.4
+    },
+    {
+      "image": "product_image6.jpg",
+      "name": "Revitalizing Eye Cream",
+      "brand": "Procter & Gamble",
+      "types_of_products": ["Skincare", "Eye Cream"],
+      "price": "$34.99",
+      "short_description": "Say goodbye to tired eyes with this revitalizing and nourishing eye cream.",
+      "rating": 4.5
+    },
+    {
+      "image": "product_image7.jpg",
+      "name": "Matte Finish Foundation",
+      "brand": "Revlon",
+      "types_of_products": ["Makeup", "Foundation"],
+      "price": "$19.99",
+      "short_description": "Achieve a flawless matte finish with this long-lasting foundation.",
+      "rating": 4.1
+    },
+    {
+      "image": "product_image8.jpg",
+      "name": "Luxurious Lipstick",
+      "brand": "Avon",
+      "types_of_products": ["Makeup", "Lipstick"],
+      "price": "$14.99",
+      "short_description": "Add a touch of luxury to your lips with this vibrant and creamy lipstick.",
+      "rating": 4.3
+    },
+    {
+      "image": "product_image9.jpg",
+      "name": "Long-Wear Mascara",
+      "brand": "Coty",
+      "types_of_products": ["Makeup", "Mascara"],
+      "price": "$22.99",
+      "short_description": "Achieve bold and long-lasting lashes with this high-performance mascara.",
+      "rating": 4.6
+    },
+    {
+      "image": "product_image10.jpg",
+      "name": "Hydrating Sheet Mask",
+      "brand": "L'Oréal",
+      "types_of_products": ["Skincare", "Sheet Mask"],
+      "price": "$9.99",
+      "short_description": "Revitalize your skin with intense hydration using this soothing sheet mask.",
+      "rating": 4.0
+    },
+    {
+      "image": "product_image11.jpg",
+      "name": "Brightening Exfoliator",
+      "brand": "Estée Lauder",
+      "types_of_products": ["Skincare", "Exfoliator"],
+      "price": "$34.99",
+      "short_description": "Enhance skin radiance with this gentle yet effective brightening exfoliator.",
+      "rating": 4.4
+    },
+    {
+      "image": "product_image12.jpg",
+      "name": "Firming Body Lotion",
+      "brand": "Chanel",
+      "types_of_products": ["Skincare", "Body Lotion"],
+      "price": "$27.99",
+      "short_description": "Achieve firmer and smoother skin with this luxurious firming body lotion.",
+      "rating": 4.2
+    },
+    {
+      "image": "product_image13.jpg",
+      "name": "Volume Boosting Shampoo",
+      "brand": "Dior",
+      "types_of_products": ["Haircare", "Shampoo"],
+      "price": "$14.99",
+      "short_description": "Add volume and vitality to your hair with this nourishing shampoo.",
+      "rating": 4.5
+    },
+    {
+      "image": "product_image14.jpg",
+      "name": "Repairing Hair Mask",
+      "brand": "Urban Decay",
+      "types_of_products": ["Haircare", "Hair Mask"],
+      "price": "$19.99",
+      "short_description": "Revitalize and repair damaged hair with this deeply conditioning hair mask.",
+      "rating": 4.3
+    },
+    {
+      "image": "product_image15.jpg",
+      "name": "Eau de Parfum",
+      "brand": "Procter & Gamble",
+      "types_of_products": ["Fragrance", "Eau de Parfum"],
+      "price": "$59.99",
+      "short_description": "Indulge in the captivating fragrance of this elegant eau de parfum.",
+      "rating": 4.7
+    },
+    {
+      "image": "product_image16.jpg",
+      "name": "Colorful Eyeshadow Palette",
+      "brand": "Revlon",
+      "types_of_products": ["Makeup", "Eyeshadow Palette"],
+      "price": "$29.99",
+      "short_description": "Create stunning eye looks with this versatile and colorful eyeshadow palette.",
+      "rating": 4.6
+    },
+    {
+      "image": "product_image17.jpg",
+      "name": "Moisturizing Hand Cream",
+      "brand": "Avon",
+      "types_of_products": ["Skincare", "Hand Cream"],
+      "price": "$12.99",
+      "short_description": "Keep your hands soft and moisturized with this nourishing hand cream.",
+      "rating": 4.0
+    },
+    {
+      "image": "product_image18.jpg",
+      "name": "Anti-Frizz Hair Serum",
+      "brand": "Coty",
+      "types_of_products": ["Haircare", "Hair Serum"],
+      "price": "$17.99",
+      "short_description": "Say goodbye to frizz and achieve silky-smooth hair with this anti-frizz serum.",
+      "rating": 4.4
+    },
+    {
+      "image": "product_image19.jpg",
+      "name": "Soothing Aloe Vera Gel",
+      "brand": "L'Oréal",
+      "types_of_products": ["Skincare", "Aloe Vera Gel"],
+      "price": "$15.99",
+      "short_description": "Soothe and hydrate your skin with the calming properties of aloe vera.",
+      "rating": 4.3
+    },
+    {
+      "image": "product_image20.jpg",
+      "name": "Volumizing Lip Plumper",
+      "brand": "Estée Lauder",
+      "types_of_products": ["Makeup", "Lip Plumper"],
+      "price": "$19.99",
+      "short_description": "Achieve fuller-looking lips with this volumizing and hydrating lip plumper.",
+      "rating": 4.5
+    }
+  ]
+
