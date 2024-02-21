@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import proPic from '../../assets/Images/products/p1.png'
+
 const ProductsCard = ({product}) => {
     const {name,price, image}= product;
   return (
-    <div className=" flex items-center flex-col text-gray-700 bg-white">
-      <div className=" flex items-center justify-center mt-4 text-gray-700 bg-[#E9E3DD] bg-clip-border  h-[285px] w-[230px]">
+    <div className="flex items-center flex-col text-gray-700 bg-white">
+      <div className="flex items-center justify-center mt-4 text-gray-700 bg-[#E9E3DD] bg-clip-border  h-[285px] w-[230px]">
         <img
                   src={image}
           alt="card-image"

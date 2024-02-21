@@ -8,7 +8,7 @@ import Error from "../Components/Pages/ErrorPage/Error";
 import Products from "../Components/Products/Products";
 import Story from "../Components/Story/Story";
 import Shop from "../Components/Shop/Shop";
-import BrandProduct from "../Components/BrandProduct/BrandProduct";
+import BrandProduct from "../Components/Brand/BrandCategory";
 
 const router = createBrowserRouter([
   {
@@ -28,12 +28,13 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+        
 
       },
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct />,
-        loader:({params})=>fetch(`/products.json/${params.brand}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
 
       },
       {
