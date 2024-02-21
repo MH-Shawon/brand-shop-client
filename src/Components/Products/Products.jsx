@@ -6,12 +6,10 @@ const Products = () => {
   
 
   const [products, setProducts] = useState([]);
-  console.log(products);
   useEffect(() => {
     fetch('products.json')
       .then(res => res.json())
       .then(data => {
-        console.log(data)
         setProducts(data)
       })
   }, [])
