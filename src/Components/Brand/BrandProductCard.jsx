@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 
 const BrandProductCard = ({brandName}) => {
-    console.log(brandName)
     const{_id,image, name, brand,price,rating} = brandName;
     return (
         <div className="flex flex-col text-gray-700 bg-white border-2 shadow-xl mb-10 p-2">
@@ -36,7 +35,7 @@ const BrandProductCard = ({brandName}) => {
                 </div>
             </div>
             <div className="flex gap-4  mt-5 mb-5">
-                <Link to={`/product/${_id}`} className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">
+                <Link to={`/details/${_id}`} className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">
                     Details
                 </Link>
                 <Link className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">

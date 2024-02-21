@@ -9,6 +9,7 @@ import Products from "../Components/Products/Products";
 import Story from "../Components/Story/Story";
 import Shop from "../Components/Shop/Shop";
 import BrandProduct from "../Components/Brand/BrandCategory";
+import ProductDetails from "../Components/Brand/Details/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -28,14 +29,20 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+       
         
 
       },
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct />,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.brand}`)
+        
 
+      },
+      {
+        path:'/details/:id',
+        element:<ProductDetails></ProductDetails>,
+        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
       },
       {
         path:'/ourstory',
