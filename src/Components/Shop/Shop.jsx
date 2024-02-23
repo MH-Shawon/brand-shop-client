@@ -5,7 +5,7 @@ import ShopCard from "./ShopCard";
 const Shop = () => {
   const [shops, setShops] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://brand-shop-server-opal-eight.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setShops(data));
   }, []);
@@ -16,7 +16,7 @@ const Shop = () => {
       </h4>
 
       <div className="grid md:grid-cols-3 grid-cols-1 gap-2 mb-16">
-        {shops.slice(0,6).map((shop) => (
+        {shops.slice(0, 6).map((shop) => (
           <ShopCard key={shop.price} shop={shop} />
         ))}
       </div>

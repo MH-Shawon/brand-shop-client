@@ -13,7 +13,7 @@ const BrandCategory = () => {
     const { brand } = useParams();
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://brand-shop-server-opal-eight.vercel.app/products')
             .then(res => res.json())
             .then(data => setBrandProducts(data))
     }, [])

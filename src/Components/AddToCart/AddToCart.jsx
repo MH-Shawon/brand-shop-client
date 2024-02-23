@@ -23,7 +23,7 @@ const AddToCart = () => {
             short_description,
             price,
         };
-        fetch("http://localhost:5000/bookings", {
+        fetch("https://brand-shop-server-opal-eight.vercel.app/bookings", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -33,9 +33,9 @@ const AddToCart = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-            if(data.insertedId){
-                toast.success("Product added successfully..!!")
-            }
+                if (data.insertedId) {
+                    toast.success("Product added successfully..!!")
+                }
             });
     };
 

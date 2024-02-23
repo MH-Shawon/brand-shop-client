@@ -44,13 +44,17 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://brand-shop-server-opal-eight.vercel.app/products/${params.id}`),
       },
       {
         path: "/book/:id",
-        element: <AddToCart />,
+        element: (
+          <PrivateRoute>
+            <AddToCart />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://brand-shop-server-opal-eight.vercel.app/products/${params.id}`),
       },
       {
         path: "/ourstory",
@@ -59,6 +63,7 @@ const router = createBrowserRouter([
       {
         path: "/mycart",
         element: <MyCart />,
+        loader: () => { "https://brand-shop-server-opal-eight.vercel.app/bookings" }
       },
       {
         path: "/login",

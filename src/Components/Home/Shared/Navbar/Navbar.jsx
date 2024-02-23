@@ -10,7 +10,7 @@ const Navbar = () => {
       .catch()
   }
   const navlinks = (
-  <div className="flex font-poppins text-lg tracking-[-0.342px]">
+    <div className="flex font-poppins text-lg tracking-[-0.342px]">
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
@@ -24,7 +24,7 @@ const Navbar = () => {
         <NavLink to="/ourstory">Our Story</NavLink>
       </li>
       {
-        user && <>
+        user?.email && <>
           <li>
             <NavLink to="/productsDetails">Details</NavLink>
           </li>
@@ -34,7 +34,7 @@ const Navbar = () => {
           </li>
         </>
       }
-      
+
     </div>
   );
   return (
@@ -88,14 +88,14 @@ const Navbar = () => {
                   <img alt="Tailwind CSS Navbar component" src={user.photoURL} />
                 </div>
               </div>
-              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+              <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-40">
                 <li>
-                  <a >
-                    {user.displayName}
+                  <a className="flex items-center justify-center" >
+                    {user?.displayName}
 
                   </a>
                 </li>
-                <li><a onClick={handleSignOut}>Logout</a></li>
+                <li><a className="flex items-center justify-center" onClick={handleSignOut}>Logout</a></li>
               </ul>
             </div> : <div className="navbar-end">
               <Link to='/login' className="btn btn-outline">Login</Link>
