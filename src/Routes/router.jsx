@@ -10,6 +10,9 @@ import Story from "../Components/Story/Story";
 import Shop from "../Components/Shop/Shop";
 import BrandProduct from "../Components/Brand/BrandCategory";
 import ProductDetails from "../Components/Brand/Details/ProductDetails";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import MyCart from "../Components/MyCart/MyCart";
+import AddToCart from "../Components/AddToCart/AddToCart";
 
 const router = createBrowserRouter([
   {
@@ -24,38 +27,47 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop />,
-
       },
       {
         path: "/products",
         element: <Products />,
-       
-        
-
       },
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct />,
-        
-
       },
       {
-        path:'/details/:id',
-        element:<ProductDetails></ProductDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+        path: "/productsDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
       },
       {
-        path:'/ourstory',
-        element:<Story />
+        path: "/book/:id",
+        element: <AddToCart />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
       },
       {
-        path: '/login',
-        element: <Login />
+        path: "/ourstory",
+        element: <Story />,
       },
       {
-        path: '//signUp',
-        element: <SignUp />
-      }
+        path: "/mycart",
+        element: <MyCart />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "//signUp",
+        element: <SignUp />,
+      },
     ],
   },
 ]);

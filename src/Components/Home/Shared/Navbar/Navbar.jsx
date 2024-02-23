@@ -23,12 +23,18 @@ const Navbar = () => {
       <li>
         <NavLink to="/ourstory">Our Story</NavLink>
       </li>
-      <li>
-        <NavLink to="/addproduct">Add Product</NavLink>
-      </li>
-      <li>
-        <NavLink to="mycart">My Cart</NavLink>
-      </li>
+      {
+        user && <>
+          <li>
+            <NavLink to="/productsDetails">Details</NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/mycart">My Cart</NavLink>
+          </li>
+        </>
+      }
+      
     </div>
   );
   return (

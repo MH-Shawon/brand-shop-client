@@ -35,7 +35,7 @@ const BrandProductCard = ({brandName}) => {
                 </div>
             </div>
             <div className="flex gap-4  mt-5 mb-5">
-                <Link to={`/details/${_id}`} className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">
+                <Link to={`/productsDetails/${_id}`} className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">
                     Details
                 </Link>
                 <Link className="h-[40px] w-1/2 font-poppins text-white bg-[#51994B] flex items-center justify-center">
