@@ -9,10 +9,12 @@ import Products from "../Components/Products/Products";
 import Story from "../Components/Story/Story";
 import Shop from "../Components/Shop/Shop";
 import BrandProduct from "../Components/Brand/BrandCategory";
-import ProductDetails from "../Components/Brand/Details/ProductDetails";
+
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
-import MyCart from "../Components/MyCart/MyCart";
 import AddToCart from "../Components/AddToCart/AddToCart";
+import MyCart from "../Components/MyCart/MyCart";
+import ProductDetails from "../Components/Brand/Details/ProductDetails";
+import UpdateProd from "../Components/MyCart/Update/UpdateProd";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct />,
+        loader: () => fetch('https://brand-shop-server-nine-omega.vercel.app/products')
       },
       {
         path: "/productsDetails/:id",
@@ -44,7 +47,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://brand-shop-server-opal-eight.vercel.app/products/${params.id}`),
+          fetch(`https://brand-shop-server-nine-omega.vercel.app/products/${params.id}`),
       },
       {
         path: "/book/:id",
@@ -54,16 +57,22 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://brand-shop-server-opal-eight.vercel.app/products/${params.id}`),
+          fetch(`https://brand-shop-server-nine-omega.vercel.app/products/${params.id}`),
       },
       {
         path: "/ourstory",
         element: <Story />,
       },
       {
-        path: "/mycart",
+        path: "/myCart",
         element: <MyCart />,
-        loader: () => { "https://brand-shop-server-opal-eight.vercel.app/bookings" }
+        // loader: () => { "https://brand-shop-server-nine-omega.vercel.app/bookings" }
+        loader: () => fetch('http://localhost:5000/bookings')
+      },
+      {
+        path: "/updateProd/:id",
+        element: <UpdateProd />,
+        loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
       },
       {
         path: "/login",

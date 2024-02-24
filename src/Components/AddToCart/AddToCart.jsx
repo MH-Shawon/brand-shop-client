@@ -23,7 +23,7 @@ const AddToCart = () => {
             short_description,
             price,
         };
-        fetch("https://brand-shop-server-opal-eight.vercel.app/bookings", {
+        fetch("https://brand-shop-server-nine-omega.vercel.app/bookings", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

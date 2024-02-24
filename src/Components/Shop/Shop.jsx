@@ -5,7 +5,7 @@ import ShopCard from "./ShopCard";
 const Shop = () => {
   const [shops, setShops] = useState([]);
   useEffect(() => {
-    fetch("https://brand-shop-server-opal-eight.vercel.app/products")
+    fetch("https://brand-shop-server-nine-omega.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setShops(data));
   }, []);

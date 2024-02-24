@@ -1,12 +1,18 @@
 import { useLoaderData } from "react-router-dom";
+import BookingCard from "./BookingCard";
+
 
 
 const MyCart = () => {
     const bookings = useLoaderData();
-    console.log(bookings)
+    
+
     return (
         <div>
-            this is my cart
+            <p> {bookings.length}</p>
+            {
+                bookings.map(book=><BookingCard key={book._id} book={book} />)
+            }
         </div>
     );
 };

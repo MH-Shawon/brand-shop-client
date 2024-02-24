@@ -10,32 +10,41 @@ const Navbar = () => {
       .catch()
   }
   const navlinks = (
-    <div className="flex font-poppins text-lg tracking-[-0.342px]">
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/products">Products</NavLink>
-      </li>
-      <li>
-        <NavLink to="/shop">Shop</NavLink>
-      </li>
-      <li>
-        <NavLink to="/ourstory">Our Story</NavLink>
-      </li>
-      {
-        user?.email && <>
-          <li>
-            <NavLink to="/productsDetails">Details</NavLink>
-          </li>
+    <>
+      <div className="flex font-poppins text-lg tracking-[-0.342px]">
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/products">Products</NavLink>
+        </li>
+        <li>
+          <NavLink to="/shop">Shop</NavLink>
+        </li>
+        <li>
+          <NavLink to="/ourstory">Our Story</NavLink>
+        </li>
 
-          <li>
-            <NavLink to="/mycart">My Cart</NavLink>
-          </li>
+        
+        <>
+          {
+            user?.email && <>
+              <li>
+                <NavLink to="/productsDetails">Details</NavLink>
+              </li>
+              <li>
+                <NavLink to="/myCart">My Cart</NavLink>
+              </li>
+            </>
+          }
         </>
-      }
+          
+        
 
-    </div>
+
+      </div>
+    </>
+    
   );
   return (
     <div className="navbar bg-base-100 mt-2  lg:px-24 sticky top-0 z-10 bg-opacity-50 backdrop-blur-4xl backdrop-saturate-200">
