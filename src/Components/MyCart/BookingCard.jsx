@@ -1,9 +1,12 @@
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const BookingCard = ({ book }) => {
     const { _id, product_name, brand_name, image } = book;
+    const { loading } = useContext(AuthContext)
     const handleDelete = (_id) => {
         console.log(_id);
         Swal.fire({
@@ -22,6 +25,7 @@ const BookingCard = ({ book }) => {
                 .then((data) => {
                     console.log(data);
                     if (data.deletedCount > 0) {
+{loading}
                         if (result.isConfirmed) {
                             Swal.fire({
                                 title: "Deleted!",
