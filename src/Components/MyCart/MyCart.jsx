@@ -6,7 +6,7 @@ import BookingCard from "./BookingCard";
 const MyCart = () => {
     const bookings = useLoaderData();
     
-
+    
     return (
         <div>
             <p> {bookings.length}</p>

@@ -1,9 +1,9 @@
+
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const BookingCard = ({ book }) => {
     const { _id, product_name, brand_name, image } = book;
-    
     const handleDelete = (_id) => {
         console.log(_id);
         Swal.fire({
@@ -15,7 +15,7 @@ const BookingCard = ({ book }) => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
-            fetch(`http://localhost:5000/bookings/${_id}`, {
+            fetch(`https://brand-shop-server-gamma-indol.vercel.app/bookings/${_id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -57,7 +57,7 @@ const BookingCard = ({ book }) => {
                     <div>
                         <div className="flex mt-7 pr-5 space-y-2 flex-col items-center justify-center">
                             <Link to={`/updateProd/${_id}`}
-                                
+
                                 className="btn btn-outline btn-success"
                             >
                                 Update

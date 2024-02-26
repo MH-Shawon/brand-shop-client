@@ -6,23 +6,23 @@ const UpdateProd = () => {
     const updateProd = useLoaderData()
     const { _id, product_name, brand_name, image, short_description } = updateProd;
     console.log(updateProd)
-    const handleUpdateProd =(event)=>{
+    const handleUpdateProd = (event) => {
         event.preventDefault();
 
         const form = event.target;
 
         const name = form.name.value;
-        
-        
+
+
         const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
 
-        const updatedCoffee = { name,  category, details, photo }
+        const updatedCoffee = { name, category, details, photo }
 
 
         // send data to the server
-        fetch(`http://localhost:5000/bookings/${_id}`, {
+        fetch(`https://brand-shop-server-gamma-indol.vercel.app/bookings/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const UpdateProd = () => {
                     })
                 }
             })
-    
+
 
     }
     return (
@@ -58,9 +58,9 @@ const UpdateProd = () => {
                             <input type="text" name="name" defaultValue={brand_name} placeholder="Coffee Name" className="input input-bordered w-full" />
                         </label>
                     </div>
-                    
+
                 </div>
-                
+
                 {/* form category and details row */}
                 <div className="md:flex mb-8">
                     <div className="form-control md:w-1/2">

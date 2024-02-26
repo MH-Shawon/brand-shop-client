@@ -13,7 +13,7 @@ const BrandCategory = () => {
     const { brand } = useParams();
 
     useEffect(() => {
-        fetch('https://brand-shop-server-nine-omega.vercel.app/products')
+        fetch('https://brand-shop-server-gamma-indol.vercel.app/products')
             .then(res => res.json())
             .then(data => setBrandProducts(data))
     }, [])

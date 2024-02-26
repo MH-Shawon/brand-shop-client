@@ -37,7 +37,7 @@ const router = createBrowserRouter([
       {
         path: "/brandProducts/:brand",
         element: <BrandProduct />,
-        loader: () => fetch('https://brand-shop-server-nine-omega.vercel.app/products')
+        loader: () => fetch('https://brand-shop-server-gamma-indol.vercel.app/products')
       },
       {
         path: "/productsDetails/:id",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://brand-shop-server-nine-omega.vercel.app/products/${params.id}`),
+          fetch(`https://brand-shop-server-gamma-indol.vercel.app/products/${params.id}`),
       },
       {
         path: "/book/:id",
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://brand-shop-server-nine-omega.vercel.app/products/${params.id}`),
+          fetch(`https://brand-shop-server-gamma-indol.vercel.app/products/${params.id}`),
       },
       {
         path: "/ourstory",
@@ -66,13 +66,13 @@ const router = createBrowserRouter([
       {
         path: "/myCart",
         element: <MyCart />,
-        // loader: () => { "https://brand-shop-server-nine-omega.vercel.app/bookings" }
-        loader: () => fetch('http://localhost:5000/bookings')
+        // loader: () => { "https://brand-shop-server-gamma-indol.vercel.app/bookings" }
+        loader: () => fetch('https://brand-shop-server-gamma-indol.vercel.app/bookings')
       },
       {
         path: "/updateProd/:id",
         element: <UpdateProd />,
-        loader: ({params}) => fetch(`http://localhost:5000/bookings/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-shop-server-gamma-indol.vercel.app/bookings/${params.id}`)
       },
       {
         path: "/login",

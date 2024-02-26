@@ -5,8 +5,8 @@ import ProductsCard from "./ProductsCard";
 const Products = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    // fetch("https://brand-shop-server-nine-omega.vercel.app/products")
-    fetch('https://brand-shop-server-nine-omega.vercel.app/products')
+    // fetch("https://brand-shop-server-gamma-indol.vercel.app/products")
+    fetch('https://brand-shop-server-gamma-indol.vercel.app/products')
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
