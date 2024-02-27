@@ -3,45 +3,6 @@ import Swal from "sweetalert2";
 
 const BookingCard = ({ book, handleDelete }) => {
   const { _id, product_name, brand_name, image } = book;
-
-//   const handleDelete = (_id) => {
-    // console.log(_id);
-    // Swal.fire({
-    //   title: "Are you sure?",
-    //   text: "You won't be able to delete this!",
-    //   icon: "warning",
-    //   showCancelButton: true,
-    //   confirmButtonColor: "#3085d6",
-    //   cancelButtonColor: "#d33",
-    //   confirmButtonText: "Yes, delete it!",
-    // }).then((result) => {
-    //   fetch(
-    //     `https://brand-shop-server-gamma-indol.vercel.app/bookings/${_id}`,
-    //     {
-    //       method: "DELETE",
-    //     }
-    //   )
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //       console.log(data);
-
-    //       if (data.deletedCount > 0) {
-    //         window.location.reload();
-    //         if (result.isConfirmed) {
-    //           Swal.fire({
-    //             title: "Deleted!",
-    //             text: "Your file has been deleted.",
-    //             icon: "success",
-    //           });
-    //         }
-    //       }
-    //     });
-    //   // .then(() => {
-    //   //     // Reload the page to fetch updated data
-
-    //   // });
-    // });
-//   };
   return (
     <div className="">
       <div className="relative mx-auto h-36  w-full max-w-[36rem]  rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-xl">
@@ -71,7 +32,7 @@ const BookingCard = ({ book, handleDelete }) => {
                 Update
               </Link>
               <button
-                onClick={handleDelete(_id)}
+                onClick={()=>handleDelete(_id)}
                 className="btn btn-outline btn-error"
               >
                 Delete
