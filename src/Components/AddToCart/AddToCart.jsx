@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Rating } from "@smastrom/react-rating";
 import toast from "react-hot-toast";
 
 const AddToCart = () => {
     const products = useLoaderData();
-
+const navigate = useNavigate()
     const { _id, image, name, brand, thumbnails, types_of_products, price, short_description, rating
  } =
         products;
@@ -39,6 +39,7 @@ const AddToCart = () => {
                 console.log(data);
                 if (data.insertedId) {
                     toast.success("Product added successfully..!!")
+navigate('/shop')
                 }
             });
     };

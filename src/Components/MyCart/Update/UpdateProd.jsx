@@ -12,9 +12,9 @@ const UpdateProd = () => {
     product_name,
     brand_name,
     types_of_products,
-    rating,
+    
     short_description,
-    price,
+    
   } = updateProd;
     console.log(_id, products_id)
   const handleUpdateProd = (event) => {
@@ -43,7 +43,7 @@ const UpdateProd = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
