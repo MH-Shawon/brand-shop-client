@@ -6,7 +6,6 @@ import Login from "../Components/Pages/Login";
 import SignUp from "../Components/Pages/SignUp";
 import Error from "../Components/Pages/ErrorPage/Error";
 import Products from "../Components/Products/Products";
-import Story from "../Components/Story/Story";
 import Shop from "../Components/Shop/Shop";
 import BrandProduct from "../Components/Brand/BrandCategory";
 
@@ -15,6 +14,7 @@ import AddToCart from "../Components/AddToCart/AddToCart";
 import MyCart from "../Components/MyCart/MyCart";
 import ProductDetails from "../Components/Brand/Details/ProductDetails";
 import UpdateProd from "../Components/MyCart/Update/UpdateProd";
+import Story from "../Components/Story/Story";
 
 const router = createBrowserRouter([
   {

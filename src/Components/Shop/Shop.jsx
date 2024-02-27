@@ -4,6 +4,7 @@ import ShopCard from "./ShopCard";
 
 const Shop = () => {
   const [shops, setShops] = useState([]);
+  
   useEffect(() => {
     fetch("https://brand-shop-server-gamma-indol.vercel.app/products")
       .then((res) => res.json())
@@ -12,7 +13,7 @@ const Shop = () => {
   return (
     <div className="lg:px-28">
       <h4 className="text-[#1A1A1A] font-merriweather text-4xl font-medium tracking-[-0.88px] mb-12">
-        Shop by Categories
+        Brand by Categories
       </h4>
 
       <div className="grid md:grid-cols-3 grid-cols-1 gap-2 mb-16">

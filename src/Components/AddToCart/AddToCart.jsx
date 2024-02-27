@@ -7,18 +7,22 @@ import toast from "react-hot-toast";
 const AddToCart = () => {
     const products = useLoaderData();
 
-    const { _id, image, name, brand, rating, short_description, price } =
+    const { _id, image, name, brand, thumbnails, types_of_products, price, short_description, rating
+ } =
         products;
 
-    const { user } = useContext(AuthContext);
+    console.log(Object.keys(products).join(","))
+
 
     const handleAddToCart = (event) => {
         event.preventDefault();
 
         const booking = {
+            products_id: _id,
             image,
             product_name: name,
             brand_name: brand,
+            types_of_products,
             rating,
             short_description,
             price,
