@@ -17,20 +17,20 @@ const Story = () => {
     const truncatedText = showFullText ? initialText : `${initialText.split(' ').slice(0, 50).join(' ')}...`;
     return (
         <div className=" text-white bg-[#251D18] shadow-2xl mb-2">
-            <div className="hero-content w-full  mx-auto text-center flex-col lg:flex-row-reverse ">
-                <div className="w-1/2 ml-20">
+            <div className="hero-content w-full  mx-auto  flex-col lg:flex-row-reverse ">
+                <div className="w-1/2">
                     <img
                         src={story}
-                        className="w-full pr-5"
+                        className="md:max-w-full flex items-center justify-center w-[600px] h-[315px] rounded-xl"
                     />
                 </div>
 
-                <div className="w-1/2 ">
-                    <h1 className="font-merriweather text-5xl font-medium">
+                <div className="w-1/2 text-center">
+                    <h1 className="font-merriweather text-5xl text-center font-medium">
                         Our Story
                     </h1>
-                    
-                    <p className="py-6 mx-auto flex justify-center font-poppins w-[484px]">{truncatedText}</p>
+
+                    <p className="py-6 md:mx-auto md:flex md:justify-center font-poppins max-w-[484px]">{truncatedText}</p>
                     {initialText.split(' ').length > 50 && (
                         <button onClick={toggleReadMore}>
                             {showFullText ? 'Read Less' : 'Read More'}
