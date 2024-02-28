@@ -18,7 +18,7 @@ const Story = () => {
     return (
         <div className=" text-white bg-[#251D18] shadow-2xl mb-2">
             <div className="hero-content w-full  mx-auto  flex-col lg:flex-row-reverse ">
-                <div className="w-1/2">
+                <div className="w-1/2 md:mr-20">
                     <img
                         src={story}
                         className="md:max-w-full flex items-center justify-center w-[600px] h-[315px] rounded-xl"
