@@ -3,14 +3,14 @@ import banner3 from '../../assets/Images/banner/banner3.jpg'
 
 const Banner2 = () => {
     return (
-        <div>
-            <div className="hero h-[500px] bg-[#251D18] lg:px-[117px]">
-                <div className="hero-content flex flex-col justify-between w-full lg:flex-row-reverse text-white">
-                    <div className="w-1/2">
+        <div className="text-white bg-[#251D18] shadow-2xl mb-2">
+            <div className="hero-content w-full  mx-auto  flex-col lg:flex-row-reverse ">
+                
+                <div className="w-1/2 md:mr-20">
                         <img src={banner3} className="w-[600px] h-[365px] rounded-lg shadow-2xl" />
                     </div>
                     
-                    <div className="w-1/2 text-center">
+                <div className="w-1/2 text-center">
                         <h1 className="text-[40px] font-medium font-merriweather">Fab Vitamin C Body Cream For
                             Skin Whitening</h1>
                         <p className="py-6">Vitamin C body creams can contribute to a brighter complexion by reducing dark spots and supporting collagen synthesis. However, consistent use and sun protection are key for optimal results.</p>
@@ -20,7 +20,7 @@ const Banner2 = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 
