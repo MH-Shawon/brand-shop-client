@@ -21,7 +21,7 @@ const Story = () => {
                 <div className="w-1/2 md:mr-20">
                     <img
                         src={story}
-                        className="md:max-w-full flex items-center justify-center w-[600px] h-[315px] rounded-xl"
+                        className="md:max-w-full flex items-center justify-center w-[600px] md:h-[315px] h-1/2 rounded-xl"
                     />
                 </div>
 

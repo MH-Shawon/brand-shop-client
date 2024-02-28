@@ -7,7 +7,7 @@ const Banner2 = () => {
             <div className="hero-content w-full  mx-auto  flex-col lg:flex-row-reverse ">
                 
                 <div className="w-1/2 md:mr-20">
-                        <img src={banner3} className="w-[600px] h-[365px] rounded-lg shadow-2xl" />
+                        <img src={banner3} className="w-[600px] md:h-[365px] h-1/2 rounded-lg shadow-2xl" />
                     </div>
                     
                 <div className="w-1/2 text-center">
